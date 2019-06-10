@@ -28,6 +28,6 @@ RUN \
 
 COPY entrypoint.sh /app/jamr/entrypoint.sh
 
-ENTRYPOINT ./entrypoint.sh
+ENTRYPOINT ["./entrypoint.sh"]
 CMD ["help"]
 
