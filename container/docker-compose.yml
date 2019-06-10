@@ -5,4 +5,6 @@ services:
     image: amr
     volumes:
       - ./models:/app/jamr/models
+      - ./data:/app/jamr/data
+    command: "parse"
 
