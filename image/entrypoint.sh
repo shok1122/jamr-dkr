@@ -16,10 +16,11 @@ case $1 in
 		shift
 		for input in $(ls data/*.txt); do
 			echo 1>&2 "parse $input"
-			scripts/PARSE.sh < $input > data/$input.amr
+			scripts/PARSE.sh < $input > $input.amr
 		done
 		;;
 	*)
+		echo 1>&2 "invalid args: $@"
 		help
 		;;
 esac
